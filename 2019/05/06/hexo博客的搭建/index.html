@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="hexo博客的搭建,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一步，先安装好node还有git 第二步，在硬盘或者桌面新建一个文件夹，起个名字，我的是hexo名字 第三步，进入 hexo官网：https://hexo.io/zh-cn/ 第四步，在hexo官网首页中复制：npm install hexo-cli -g。然后在hexo那个文件夹右键Git Bash Code 输入/执行后需要等待一段时间 第五步，输入hexo init 执行后需要等待(很长)">
+<meta name="keywords" content="hexo博客的搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo博客的搭建">
+<meta property="og:url" content="http://Hajarke.com/2019/05/06/hexo博客的搭建/index.html">
+<meta property="og:site_name" content="Hajarke">
+<meta property="og:description" content="第一步，先安装好node还有git 第二步，在硬盘或者桌面新建一个文件夹，起个名字，我的是hexo名字 第三步，进入 hexo官网：https://hexo.io/zh-cn/ 第四步，在hexo官网首页中复制：npm install hexo-cli -g。然后在hexo那个文件夹右键Git Bash Code 输入/执行后需要等待一段时间 第五步，输入hexo init 执行后需要等待(很长)">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://mackxin.com/">
+<meta property="og:updated_time" content="2019-05-09T07:40:17.837Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo博客的搭建">
+<meta name="twitter:description" content="第一步，先安装好node还有git 第二步，在硬盘或者桌面新建一个文件夹，起个名字，我的是hexo名字 第三步，进入 hexo官网：https://hexo.io/zh-cn/ 第四步，在hexo官网首页中复制：npm install hexo-cli -g。然后在hexo那个文件夹右键Git Bash Code 输入/执行后需要等待一段时间 第五步，输入hexo init 执行后需要等待(很长)">
+<meta name="twitter:image" content="http://mackxin.com/">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://Hajarke.com/2019/05/06/hexo博客的搭建/">
+
+
+
+
+
+  <title>hexo博客的搭建 | Hajarke</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hajarke</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://Hajarke.com/2019/05/06/hexo博客的搭建/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hao">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/扬帆起航.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hajarke">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">hexo博客的搭建</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-06T19:05:46+08:00">
+                2019-05-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/hexo博客的搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">hexo博客的搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>第一步，先安装好node还有git</p>
+<p>第二步，在硬盘或者桌面新建一个文件夹，起个名字，我的是hexo名字</p>
+<p>第三步，进入 hexo官网：<a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">https://hexo.io/zh-cn/</a></p>
+<p>第四步，在hexo官网首页中复制：npm install hexo-cli -g。<br>然后在hexo那个文件夹右键Git Bash Code 输入/执行后需要等待一段时间</p>
+<p>第五步，输入hexo init 执行后需要等待(很长)一段时间 ，<br>输入npm -v查看版本</p>
+<p>第六步，输入hexo s  然后复制<a href="http://localhost:4000在浏览器打开，" target="_blank" rel="noopener">http://localhost:4000在浏览器打开，</a><br>就可以看到你的hexo主页了。如果再想输入代码的话，<br>可以ctrl加c停止当前的代码，就可以输入代码了</p>
+<p>第七步，下载next主题，在浏览器打开<a href="http://theme-next.iissnan.com/这个网址，" target="_blank" rel="noopener">http://theme-next.iissnan.com/这个网址，</a><br>点击开始使用，点击下载稳定版本，<br>点击发布页面，找到Assets下面的Source code(zip)点击一下，就自动下包了。<br>下载完后把那个压缩包的文件拉到themes文件下，再改名字，改为next</p>
+<p>第八步，修改主题，在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>ctrl+F 搜索 theme: 把这里的landscape 改成 next，<br>然后可以在在hexo的根目录下打开Git Bash执行hexo s代码，<br>可以看到主题已经改了</p>
+<p>第九步，修改语言为中文，在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>找到 language，然后复制这一段替换language: zh-Hans，<br>刚替换的时候，语言还替换不了的，在hexo文件的根目录下右键Git Bash，<br>第一步输入hexo clear 清理缓存，<br>第二步hexo g 生成文件，<br>第三步hexo s 启用服务器，<br>在我们需要打开hexo页面的时候 该文件不能关掉</p>
+<p>第十步，开启hexo的标签导航。<br>打开next文件根目录下的_config.yml，<br>ctrl+F 搜索menu，把tags，<br>categories前面加#的符号都去掉 再回到hexo刷新页面，</p>
+<p>第十一步，创建标签页面。<br>在hexo文件的根目录下右键Git Bash，ctrl+c先把hexo服务器关闭，<br>创建标签页: hexo n page tags，等待完成，会在 source目录下多出一个文件: tags，<br>打开该文件里的index.md文件，<br>title: 这个页面的标题名字，我的这个页面是标签页面，所以标题名称是标签，<br>date: 时间，<br>type: “tags” 这个必须要填 不然不会显示<br>创建分类页面，hexo n page categories，等待完成，会在 source目录下多出一个文件: categories，<br>打开该文件里的index.md文件，<br>title: 这个页面的标题名字，我的这个页面是分类页面，所以标题名称是分类，<br>date: 时间，<br>type: “categories” 这个必须要填 不然不会显示，<br>然后重新开启服务器，然后点击标签页，就可以看到效果了</p>
+<p>第十二步，修改主题，在next的官方文档中有说明，<br>在next的根目录下打开配置文件 _config.yml，<br>ctrl+F 搜索关键字 Scheme，然后找到Scheme Settings，<br>主题都在下面，喜欢那个主题就把前面的#号去掉就可以了，<br>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白，<br>Mist - Muse ，整洁有序的单栏外观，<br>Pisces - 双栏，版心会比较小，<br>我用的是scheme: Gemini这个主题，和Pisces一样，就是版心比较大</p>
+<p>第十三步，设置头像。<br>在next的根目录下 打开_config.yml配置文件，<br>ctrl+F 搜索关键字 avatar，<br>把avatar: 前面的#号去掉<br>这里的images是存放图片的 你可以自己存图片进来 images在next的source目录下</p>
+<p>第十四步，设置网页标题，<br>在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>然后修改title: 网站的名称，随意你改名字，最好有代表性的一个单词<br>author: 作者姓名，<br>url: http://这里填的是title的标题名字.com，<br>修改完后 刷新hexo页面是无法看到改变的 需要生成文件，<br>在hexo文件的根目录下右键Git Bash，<br>第一步输入hexo clear 清理缓存，<br>第二步hexo g 生成文件，<br>第三步hexo s 启用服务器，</p>
+<p>第十五步，设置 侧边栏社交链接，<br>打开next文件中的_config.yml配置文件，<br>搜索关键字: social，把social: 前面的#去掉，<br>把Github和E-Mail的#号去掉，<br>然后在github那一行把yourname改成你的标题名称，<br>再去email这行把email改成weibo，<br>把github上面的地址复制下来，<br>然后把github改成weibo，最后面那个后缀也改成weibo</p>
+<p>第十六步，启用友情链接，<br>打开next文件中的_config.yml配置文件，<br>搜索： #links_layout: inline，把下面那行的links: 前面的#去掉，<br>Title: http:…. 也把友情链接的#也去掉，Title可以改成你的想要的名字，<br>这里的链接模仿的是馨客栈的地址，把中间的example改成mackxin，<br>可以依照第一个来设置多个友情链接，<br>那个标题名字可以改成中文的，<br>第二个链接也是模仿馨客栈的，馨客栈导航: <a href="http://mackxin.com/nav.html" target="_blank" rel="noopener">http://mackxin.com/nav.html</a></p>
+<p>第十七步，新建一篇文章，<br>先ctrl+c关闭hexo服务器，<br>创建文章: 在hexo的根目录下 打开git 输入命令行  hexo n 文章名字 然后回车，<br>然后 hexo s 开启服务器，然后刷新页面 就可以在首页看到多出来一篇文章</p>
+<p>第十八步，让新建的文章在标签和分类页中显示出来，<br>在hexo根目录中打开source文件夹，打开_posts文件夹，<br>用代码编辑器打开你刚刚新建的文件，<br>在tags:回车一行然后TRB空格一下再添加- 导航，再换行再添加- 分享，这两个东西是是标签页显示的东西，<br>作用是让你可以通过标签来找到那一篇文章，<br>有时候你删除了一个标签，但是页面没有更新，你就要清除一下缓存那三个步骤。<br>categories: 前端，这个前端是在分类页面显示出来的文字，<br>这是一个分类，写正文的话需要在这三个—横杠下面写才有效，</p>
+<p>#一级标题， ## 二级标题</p>
+<p>第十九步，Markdown的基本使用，<br>标题</p>
+<h1 id="一个-号是一级标题"><a href="#一个-号是一级标题" class="headerlink" title="一个#号是一级标题"></a>一个#号是一级标题</h1><h2 id="两个-号是二级标题"><a href="#两个-号是二级标题" class="headerlink" title="两个#号是二级标题"></a>两个#号是二级标题</h2><h3 id="三个-号是三级标题"><a href="#三个-号是三级标题" class="headerlink" title="三个#号是三级标题"></a>三个#号是三级标题</h3><p>依次类推，最小的一个标题是六级标题<br>列表</p>
+<ul>
+<li>列表1                 母列表<br>列表1的子列表1     子列表可以随意写文字<br>列表1的子列表2</li>
+<li>列表2                 母列表<br>列表2的子列表1<br>列表2的子列表2</li>
+<li>列表3                 母列表<br>列表3的子列表1<br>列表3的子列表2<br>虚线</li>
+</ul>
+<hr>
+<hr>
+<p>插入链接<br><a href="http://mackxin.com/" target="_blank" rel="noopener">馨客栈导航</a><br>插入图片<br><img src="http://mackxin.com/" alt="呀"><br>斜体字<br><em>这里写的字是斜的</em><br>粗体<br><strong>这里写的字是加粗的</strong><br>单行代码块<br><code>&lt;div&gt;&lt;/div&gt;</code><br>多行代码块<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        文字</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+<p>第二十步，修改主页的文章的显示，显示一个查看全文的按钮，打开next的配置文件，然后ctrl + f 搜索 auto_<br>搜到auto_excerpt:   然后把他的enable:false 的值改成 true  </p>
+<p>第二十一步，修改链接的颜色，首先在hexo根目录中打开themes里面的next里面的source里面的css里面的_common里面的components里面的post文件夹里面的post.styl文件，然后在最下面粘贴以下代码<br>.post-body p a {<br>  color: hotpink;<br>  border-bottom: none;<br>  &amp;:hover {<br>    color: orange;<br>  }<br>}</p>
+<p>第二十二步，把项目部署到github，实现在线观看。<br>（1）首先建一个github账号，名字要和你的hexo名称一样，如果名称被注册了，就换一个，然后要知道你的邮箱账号。<br>然后在你的hexo根目录下右键Git Bash，输入命令，git config –global user.name ‘这里面输入你git账号名称’<br>然后回车，回车后再输入git config –global user.name ，输完后回车， 查看你的用户名是否设置成功。<br>第二步，输入 git config –global user.email ‘这里输入你的邮箱’ 然后回车，<br>回车后输入 git config –global user.email 再回车 ，查看你的邮箱是否设置成功。<br>（2）创建密钥，输入 ssh-keygen -t rsa -C ‘这里输入你的邮箱’ ，然后回车。回车后，<br>就会在你的系统里面创建密钥。后面会显示出一个文件目录地址，依照这个路径打开文件目录，我的是/c/Users/MECHREVO/.ssh/id_rsa ，就是在C盘下的Users文件夹，<br>但是我这个电脑不太一样，我电脑显示的是中文用户两个字，所以这个要注意一下，剩下的依照目录找下去，<br>直到找到和id_rsa这个文件同级目录下的id_rsa.pub文件，然后用代码编辑器打开，里面就是你的密钥，<br>全选复制，然后去你的github，点击右上角头像下面的小箭头，然后进入设置，从下往上数，第二个，<br>github一般显示的是英文，你可以在页面空白处右键，然后点击翻译成中文，进入设置后，点击SSH和GPG，<br>从上往下数第六个，进来后，点击新的SSH密钥，然后标题就输入你的github名字就好，下面的键里面就把你刚刚<br>复制的密钥粘贴进来。最后点击添加SSH密钥，到现在，添加密钥成功。<br>还有一种情况就是，你已经有密钥了。那你输入ssh-keygen -t rsa -C ‘这里输入你的邮箱’ ，这个后，显示出那个<br>文件的目录就 ctrl + c 停止当前的操作，然后也是和上面一样把密钥粘贴到你的新github上面，我是创了一个新的<br>github账号，所以才要重新粘贴一次密钥，如果是用旧的git账号就不用这样做。<br>（3）粘贴完密钥后，输入一行命令，ssh -T <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a> ，如果直接显示Hi （你的git账号名字）! You’ve successfully authenticated, but GitHub does not provide shell access.  就表示成功了。如果显示出来的有一行这样的英文Are you sure you want to continue connecting (yes/no)?    那你就在后面输入 yes  就完成了，是问你是否要和github实行远程连接。<br>（4）用编辑器打开你的hexo根目录下的_config.yml文件，找到最下面那行type: 然后空格一下再输入 git，type的冒号后面和输入的内容要有一个空格，不然会没效果。然后回车，再下面再新加一行代码，repo: 冒号后面也需要一个空格，然后去到你的github上找到你的那个项目，点进去后会看到快速设置，看到HTTPS和SSH，点击SSH，然后把后面的地址复制下来，粘贴到repo的后面。再回车，输入branch: master<br>(5) </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>喜欢打赏一下哦</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/微信收款.png" alt="hao 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/支付宝收款.jpg" alt="hao 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/hexo博客的搭建/" rel="tag"># hexo博客的搭建</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/27/markdown/" rel="next" title="markdown语法">
+                <i class="fa fa-chevron-left"></i> markdown语法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/扬帆起航.jpg" alt="hao">
+            
+              <p class="site-author-name" itemprop="name">hao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Hajar" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/Hajar" target="_blank" title="weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>weibo</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mackxin.com/" title="馨客栈" target="_blank">馨客栈</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://mackxin.com/nav.html" title="馨客栈导航" target="_blank">馨客栈导航</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一个-号是一级标题"><span class="nav-number">1.</span> <span class="nav-text">一个#号是一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#两个-号是二级标题"><span class="nav-number">1.1.</span> <span class="nav-text">两个#号是二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三个-号是三级标题"><span class="nav-number">1.1.1.</span> <span class="nav-text">三个#号是三级标题</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">hao</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
