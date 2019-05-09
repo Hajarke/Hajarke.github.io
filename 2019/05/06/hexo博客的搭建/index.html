@@ -88,7 +88,7 @@
 <meta property="og:description" content="第一步，先安装好node还有git 第二步，在硬盘或者桌面新建一个文件夹，起个名字，我的是hexo名字 第三步，进入 hexo官网：https://hexo.io/zh-cn/ 第四步，在hexo官网首页中复制：npm install hexo-cli -g。然后在hexo那个文件夹右键Git Bash Code 输入/执行后需要等待一段时间 第五步，输入hexo init 执行后需要等待(很长)">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://mackxin.com/">
-<meta property="og:updated_time" content="2019-05-09T09:16:48.618Z">
+<meta property="og:updated_time" content="2019-05-09T15:40:37.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客的搭建">
 <meta name="twitter:description" content="第一步，先安装好node还有git 第二步，在硬盘或者桌面新建一个文件夹，起个名字，我的是hexo名字 第三步，进入 hexo官网：https://hexo.io/zh-cn/ 第四步，在hexo官网首页中复制：npm install hexo-cli -g。然后在hexo那个文件夹右键Git Bash Code 输入/执行后需要等待一段时间 第五步，输入hexo init 执行后需要等待(很长)">
@@ -352,17 +352,16 @@
 <p>第六步，输入hexo s  然后复制<a href="http://localhost:4000在浏览器打开，" target="_blank" rel="noopener">http://localhost:4000在浏览器打开，</a><br>就可以看到你的hexo主页了。如果再想输入代码的话，<br>可以ctrl加c停止当前的代码，就可以输入代码了</p>
 <p>第七步，下载next主题，在浏览器打开<a href="http://theme-next.iissnan.com/这个网址，" target="_blank" rel="noopener">http://theme-next.iissnan.com/这个网址，</a><br>点击开始使用，点击下载稳定版本，<br>点击发布页面，找到Assets下面的Source code(zip)点击一下，就自动下包了。<br>下载完后把那个压缩包的文件拉到themes文件下，再改名字，改为next</p>
 <p>第八步，修改主题，在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>ctrl+F 搜索 theme: 把这里的landscape 改成 next，<br>然后可以在在hexo的根目录下打开Git Bash执行hexo s代码，<br>可以看到主题已经改了</p>
-<p>第九步，修改语言为中文，在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>找到 language，然后复制这一段替换language: zh-Hans，<br>刚替换的时候，语言还替换不了的，在hexo文件的根目录下右键Git Bash，<br>第一步输入hexo clear 清理缓存，<br>第二步hexo g 生成文件，<br>第三步hexo s 启用服务器，<br>在我们需要打开hexo页面的时候 该文件不能关掉</p>
-<p>第十步，开启hexo的标签导航。<br>打开next文件根目录下的_config.yml，<br>ctrl+F 搜索menu，把tags，<br>categories前面加#的符号都去掉 再回到hexo刷新页面，</p>
-<p>第十一步，创建标签页面。<br>在hexo文件的根目录下右键Git Bash，ctrl+c先把hexo服务器关闭，<br>创建标签页: hexo n page tags，等待完成，会在 source目录下多出一个文件: tags，<br>打开该文件里的index.md文件，<br>title: 这个页面的标题名字，我的这个页面是标签页面，所以标题名称是标签，<br>date: 时间，<br>type: “tags” 这个必须要填 不然不会显示<br>创建分类页面，hexo n page categories，等待完成，会在 source目录下多出一个文件: categories，<br>打开该文件里的index.md文件，<br>title: 这个页面的标题名字，我的这个页面是分类页面，所以标题名称是分类，<br>date: 时间，<br>type: “categories” 这个必须要填 不然不会显示，<br>然后重新开启服务器，然后点击标签页，就可以看到效果了</p>
+<p>第九步，修改语言为中文，在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>找到 language，然后复制这一段替换language: zh-Hans，<br>刚替换的时候，语言还替换不了的，在hexo文件的根目录下右键Git Bash，执行清理缓存三步骤<br>（1）输入hexo clear 清理缓存，<br>（2）hexo g 生成文件，<br>（3）hexo s 启用服务器，<br>在我们需要打开hexo页面的时候 Git Bash页面不能关掉</p>
+<p>第十步，开启hexo的标签导航。<br>打开next文件根目录下的_config.yml，<br>ctrl+F 搜索menu，把tags，categories前面加#的符号都去掉 再回到hexo刷新页面，</p>
+<p>第十一步，创建标签页面。<br>在hexo文件的根目录下右键Git Bash，ctrl+c先把hexo服务器关闭，<br>创建标签页: hexo n page tags，等待完成，会在 source目录下多出一个文件: tags，<br>打开该文件里的index.md文件，<br>title: （这个页面的标题名字），我的这个页面是标签页面，所以标题名称是标签，<br>date: （这里是时间），不需要改变<br>type: “tags” 这个必须要填 不然不会显示<br>创建分类页面，hexo n page categories，等待完成，会在 source目录下多出一个文件: categories，<br>打开该文件里的index.md文件，<br>title: （这个页面的标题名字），我的这个页面是分类页面，所以标题名称是分类，<br>date: （这里是时间），<br>type: “categories” 这个必须要填 不然不会显示，<br>然后重新开启服务器，然后点击标签页，就可以看到效果了</p>
 <p>第十二步，修改主题，在next的官方文档中有说明，<br>在next的根目录下打开配置文件 _config.yml，<br>ctrl+F 搜索关键字 Scheme，然后找到Scheme Settings，<br>主题都在下面，喜欢那个主题就把前面的#号去掉就可以了，<br>Muse - 默认 Scheme，这是 NexT 最初的版本，黑白主调，大量留白，<br>Mist - Muse ，整洁有序的单栏外观，<br>Pisces - 双栏，版心会比较小，<br>我用的是scheme: Gemini这个主题，和Pisces一样，就是版心比较大</p>
-<p>第十三步，设置头像。<br>在next的根目录下 打开_config.yml配置文件，<br>ctrl+F 搜索关键字 avatar，<br>把avatar: 前面的#号去掉<br>这里的images是存放图片的 你可以自己存图片进来 images在next的source目录下</p>
-<p>第十四步，设置网页标题，<br>在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>然后修改title: 网站的名称，随意你改名字，最好有代表性的一个单词<br>author: 作者姓名，<br>url: http://这里填的是title的标题名字.com，<br>修改完后 刷新hexo页面是无法看到改变的 需要生成文件，<br>在hexo文件的根目录下右键Git Bash，<br>第一步输入hexo clear 清理缓存，<br>第二步hexo g 生成文件，<br>第三步hexo s 启用服务器，</p>
+<p>第十三步，设置头像。<br>在next的根目录下 打开_config.yml配置文件，<br>ctrl+F 搜索关键字 avatar，<br>把avatar: 前面的#号去掉 ，然后在avatar后面输入图片路径，把你想要的设置的图片放在images文件夹下，<br>images文件夹在next的source目录下</p>
+<p>第十四步，设置网页标题，<br>在hexo文件的根目录下 找到_config.yml文件用代码编辑器打开该文件，<br>然后修改title: 网站的名称，随意你改名字，最好有代表性的一个单词<br>author: （作者姓名）<br>url: http://这里填的是title的标题名字.com，<br>修改完后 刷新hexo页面是无法看到改变的 需要生成文件，<br>在hexo文件的根目录下右键Git Bash，输入清除缓存三步骤，<br>（1）输入hexo clear 清理缓存，<br>（2）hexo g 生成文件，<br>（3）hexo s 启用服务器，</p>
 <p>第十五步，设置 侧边栏社交链接，<br>打开next文件中的_config.yml配置文件，<br>搜索关键字: social，把social: 前面的#去掉，<br>把Github和E-Mail的#号去掉，<br>然后在github那一行把yourname改成你的标题名称，<br>再去email这行把email改成weibo，<br>把github上面的地址复制下来，<br>然后把github改成weibo，最后面那个后缀也改成weibo</p>
-<p>第十六步，启用友情链接，<br>打开next文件中的_config.yml配置文件，<br>搜索： #links_layout: inline，把下面那行的links: 前面的#去掉，<br>Title: http:…. 也把友情链接的#也去掉，Title可以改成你的想要的名字，<br>这里的链接模仿的是馨客栈的地址，把中间的example改成mackxin，<br>可以依照第一个来设置多个友情链接，<br>那个标题名字可以改成中文的，<br>第二个链接也是模仿馨客栈的，馨客栈导航: <a href="http://mackxin.com/nav.html" target="_blank" rel="noopener">http://mackxin.com/nav.html</a></p>
-<p>第十七步，新建一篇文章，<br>先ctrl+c关闭hexo服务器，<br>创建文章: 在hexo的根目录下 打开git 输入命令行  hexo n 文章名字 然后回车，<br>然后 hexo s 开启服务器，然后刷新页面 就可以在首页看到多出来一篇文章</p>
-<p>第十八步，让新建的文章在标签和分类页中显示出来，<br>在hexo根目录中打开source文件夹，打开_posts文件夹，<br>用代码编辑器打开你刚刚新建的文件，<br>在tags:回车一行然后TRB空格一下再添加- 导航，再换行再添加- 分享，这两个东西是是标签页显示的东西，<br>作用是让你可以通过标签来找到那一篇文章，<br>有时候你删除了一个标签，但是页面没有更新，你就要清除一下缓存那三个步骤。<br>categories: 前端，这个前端是在分类页面显示出来的文字，<br>这是一个分类，写正文的话需要在这三个—横杠下面写才有效，</p>
-<p>#一级标题， ## 二级标题</p>
+<p>第十六步，启用友情链接，<br>打开next文件中的_config.yml配置文件，<br>搜索： #links_layout: inline，把下面那行的links: 前面的#去掉，下面Title的#号也去掉，改成馨客栈的链接<br>Title: <a href="http://mackxin.com/" target="_blank" rel="noopener">http://mackxin.com/</a> ，Title可以改成你的想要的名字，可以把Title改成中文，<br>中间的原来是example现在改成了mackxin，可以设置多个友情链接，按照第一个来设置就好了，<br>第二个链接也是模仿馨客栈的，馨客栈导航: <a href="http://mackxin.com/nav.html，如果你自己有链接，可以换成你自己的" target="_blank" rel="noopener">http://mackxin.com/nav.html，如果你自己有链接，可以换成你自己的</a></p>
+<p>第十七步，新建一篇文章，<br>先ctrl+c关闭hexo服务器，<br>创建文章: 在hexo的根目录下 打开git 输入命令行  hexo n （文章名字）  输入命令的时候不要把包裹文章名字的括号也输入进去了，这里的意思是（文章名字）换成你这篇文章的名字，例如word， 然后回车，<br>然后 hexo s 开启服务器，然后刷新页面 就可以在首页看到多出来一篇文章</p>
+<p>第十八步，让新建的文章在标签和分类页中显示出来，<br>在hexo根目录中打开source文件夹，打开_posts文件夹，<br>用代码编辑器打开你刚刚新建的文件，<br>在tags:回车一行然后TRB空格一下再添加括号里面的内容，（- 这篇文章的名字），再换行再添加- 分享，这两个东西是是标签页显示的东西，<br>作用是让你可以通过标签来找到那一篇文章，<br>有时候你删除了一个标签，但是页面没有更新，你就要执行一下清除缓存那三个步骤。<br>categories: （前端），这个前端是在分类页面显示出来的文字，<br>这是一个分类，写正文的话需要在这三个- - -横杠下面写才有效，</p>
 <p>第十九步，Markdown的基本使用，<br>标题</p>
 <h1 id="一个-号是一级标题"><a href="#一个-号是一级标题" class="headerlink" title="一个#号是一级标题"></a>一个#号是一级标题</h1><h2 id="两个-号是二级标题"><a href="#两个-号是二级标题" class="headerlink" title="两个#号是二级标题"></a>两个#号是二级标题</h2><h3 id="三个-号是三级标题"><a href="#三个-号是三级标题" class="headerlink" title="三个#号是三级标题"></a>三个#号是三级标题</h3><p>依次类推，最小的一个标题是六级标题<br>列表</p>
 <ul>
